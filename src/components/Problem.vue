@@ -17,6 +17,11 @@ defineComponent({
     this.var = new Criteria();
 
     this.sayHello(this.var); // The type does not match the expected type 'Criteria'.
+
+    // These however work:
+    const criteria = new Criteria();
+    this.sayHello(criteria);
+    this.sayHello(new Criteria());
   },
 
   methods: {
